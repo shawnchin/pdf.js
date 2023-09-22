@@ -17,6 +17,7 @@ import "web-com";
 import "web-print_service";
 import { RenderingStates, ScrollMode, SpreadMode } from "./ui_utils.js";
 import { AppOptions } from "./app_options.js";
+import { hideStuff } from "./custom.js";
 import { LinkTarget } from "./pdf_link_service.js";
 import { PDFViewerApplication } from "./app.js";
 
@@ -184,6 +185,7 @@ function getViewerConfiguration() {
 
 function webViewerLoad() {
   const config = getViewerConfiguration();
+  hideStuff(config);
 
   if (typeof PDFJSDev !== "undefined" && PDFJSDev.test("GENERIC")) {
     // Give custom implementations of the default viewer a simpler way to

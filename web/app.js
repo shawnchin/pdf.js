@@ -2072,8 +2072,8 @@ const PDFViewerApplication = {
       passive: false,
     });
     window.addEventListener("click", webViewerClick);
-    window.addEventListener("keydown", webViewerKeyDown);
-    window.addEventListener("keyup", webViewerKeyUp);
+    // window.addEventListener("keydown", webViewerKeyDown);
+    // window.addEventListener("keyup", webViewerKeyUp);
     window.addEventListener("resize", _boundEvents.windowResize);
     window.addEventListener("hashchange", _boundEvents.windowHashChange);
     window.addEventListener("beforeprint", _boundEvents.windowBeforePrint);
@@ -2165,8 +2165,8 @@ const PDFViewerApplication = {
       passive: false,
     });
     window.removeEventListener("click", webViewerClick);
-    window.removeEventListener("keydown", webViewerKeyDown);
-    window.removeEventListener("keyup", webViewerKeyUp);
+    // window.removeEventListener("keydown", webViewerKeyDown);
+    // window.removeEventListener("keyup", webViewerKeyUp);
     window.removeEventListener("resize", _boundEvents.windowResize);
     window.removeEventListener("hashchange", _boundEvents.windowHashChange);
     window.removeEventListener("beforeprint", _boundEvents.windowBeforePrint);

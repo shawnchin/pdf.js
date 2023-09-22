@@ -19,6 +19,12 @@ function hideStuff(config) {
   // delete the whole toolbar
   document.getElementById("toolbarViewerRight").remove();
 
+  // Disable other buttons
+  _hideMenuItem(config.sidebar, "attachmentsView");
+  document.getElementById("viewAttachments").remove();
+  _hideMenuItem(config.sidebar, "layersView");
+  document.getElementById("viewLayers").remove();
+
   function _hideMenuItem(configParent, key) {
     if (configParent[key]) {
       configParent[key].remove();
